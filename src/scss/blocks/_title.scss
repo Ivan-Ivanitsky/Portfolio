@@ -1,0 +1,65 @@
+.title{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 60px;
+
+    span{
+        color:  #007f96;
+    }
+
+    &_fzcalc{
+        font-size: calc(3rem + 10 *((100vw - 320px))/800);
+        font-weight: bold;
+    }
+    &_fz16{
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: bold;
+    }
+    &_fz48{
+        margin-top: 9px;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 60px;
+        width: 532px;
+    }
+    &_fz36{
+        font-weight: bold;
+        font-size: 36px;
+        color: #000000;
+        text-align: center;
+    }
+    &_fz20{
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 30px;
+
+    }
+    &_fz14{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+    }
+    &_fz12{
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+    }
+    &__section-header{
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        @include circle;
+        padding-left: 0;
+        font-weight: bold;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+    }
+    &__section-subheader{
+        margin: 0 auto;
+        text-align: center;
+    }
+}

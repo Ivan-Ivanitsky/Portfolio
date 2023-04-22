@@ -1,0 +1,213 @@
+.portfolio {
+    padding-top: 120px;
+
+    &__wrapper {
+        padding-top: 60px;
+        display: grid;
+        grid-template-columns: 280px 280px 280px 280px;
+        grid-template-rows: 280px 280px;
+        grid-auto-rows: 280px auto;
+        gap: 5px;
+        position: relative;
+        overflow: hidden;
+
+        .portfolio__rgba {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba($color: #000000, $alpha: 0.7);
+            opacity: 0;
+        }
+
+        .info {
+            opacity: 0;
+            transition: all 0.3s;
+            visibility: hidden;
+        }
+
+        .show {
+            width: 85px;
+            text-align: center;
+            top: 32%;
+            right: 50%;
+            transform: translateX(50%);
+            position: absolute;
+            display: block;
+            color: #fff;
+            border: dashed #fff 1px;
+            border-radius: 30px;
+            pointer-events: none;
+
+            span {
+                padding: 5px 20px 5px 20px;
+            }
+        }
+
+        .portfolio__title {
+            position: absolute;
+            width: 100%;
+            top: 15px;
+            text-align: center;
+            color: #fff;
+            opacity: 0;
+            transition: all 0.3s;
+            font-size: 25px;
+            pointer-events: none;
+        }
+    }
+
+    &__items {
+        transition: all 0.2s;
+        transform: scale(1);
+        border-radius: 30px;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        // &-plans {
+        //     display: grid;
+        //     grid-row: 1 / 3;
+        //     // grid-column: 4 / 5;
+        //     transition: all 0.2s;
+        //     transform: scale(1);
+        //     // @include animate;
+
+        //     img {
+        //         width: 100%;
+        //         height: 100%;
+        //         object-fit: cover;
+        //     }
+        // }
+
+        &-mac {
+            transition: all 0.2s;
+            transform: scale(1);
+            // grid-column: 2 / 4;
+            // @include animate;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+
+        // @include animate;
+    }
+
+    .active-card {
+        &:hover {
+            transition: all 0.3s;
+            transform: scale(1.05);
+            z-index: 10000;
+
+            .info {
+                visibility: visible;
+                opacity: 1;
+                transition: all 0.3s;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                // pointer-events:none
+            }
+
+            .portfolio__rgba {
+                opacity: 1;
+            }
+
+            .portfolio__title {
+                opacity: 1;
+                transition: all 0.3s;
+            }
+        }
+    }
+
+    .line {
+        margin: 25px auto 0;
+    }
+
+    .active--write {
+        position: absolute;
+        top: 0;
+    }
+
+    .description {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        left: 0;
+        color: #fff;
+        font-size: 13px;
+        width: 240px;
+        margin: 0 auto;
+        text-align: center;
+        pointer-events: none;
+    }
+
+
+}
+
+.links {
+    position: absolute;
+    top: 45%;
+    display: flex;
+    right: 50%;
+    transform: translateX(50%);
+    justify-content: space-evenly;
+    transition: 0.5s all;
+
+    .link-code {
+        width: 60px;
+        text-align: center;
+        color: #fff;
+        border: dashed #fff 1px;
+        border-radius: 30px;
+        margin-right: 50px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 14px;
+            height: 2px;
+            left: 36px;
+            top: -7px;
+            transform: rotate(-50deg);
+            background-color: #fff;
+        }
+    }
+
+    .link-web {
+        width: 60px;
+        text-align: center;
+        color: #fff;
+        border: dashed #fff 1px;
+        border-radius: 30px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 14px;
+            height: 2px;
+            /* left: 89px; */
+            top: -7px;
+            right: 36px;
+            -webkit-transform: rotate(-50deg);
+            transform: rotate(50deg);
+            background-color: #fff;
+        }
+    }
+
+}

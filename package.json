@@ -1,0 +1,25 @@
+{
+  "name": "portfolionew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.29.1",
+    "gsap": "^3.11.5",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-uglify-es": "^3.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-iconfont": "^11.0.1",
+    "gulp-svgmin": "^4.1.0"
+  }
+}

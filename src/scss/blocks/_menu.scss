@@ -1,0 +1,119 @@
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    left: -100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.6s;
+    &.active{
+        left: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    &__close{
+        position: absolute;
+        top: 24px;
+        right: 25px;
+    }
+
+    &__list {
+        position: relative;
+        z-index: 10;
+        width: 345px;
+        height: 100%;
+        background-color: $main_color;
+        
+    }
+    
+    &__element{
+       padding-top: 140px;
+       padding-left: 70px;
+    }
+
+    &__link{
+        position: relative;
+        margin-bottom: 15px;
+        list-style-type: none;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        
+        a{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        a:hover{
+                transition: all 0.6s;
+                 color: #007f96;;    
+        }
+        &:before{
+            content: "";
+            position: absolute;
+            transform: translateY(2px);
+            width: 15px;
+            height: 15px;
+            border: 1px solid #000000;
+            border-radius: 100%;
+            box-sizing: border-box;
+            top: 10px;
+            left: -35px;
+        }
+        &:hover{
+            &:before{
+                transition: all 0.6s;
+                background-color: #007f96;;    
+            }
+        }
+        
+    }
+    
+
+    &__social{
+        position: absolute;
+        bottom: 50px;
+        left: 128px;
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .menu__icon{
+            transition: all 0.2s ;
+          &:hover{
+            &:nth-child(1){
+                scale: (1.2);
+                transition: all 0.2s;
+                svg path{
+                    fill: gray;
+                }
+            }
+            &:nth-child(2){
+                scale: (1.2);
+                transition: all 0.2s;
+                svg path{
+                    fill: rgb(202, 11, 11);
+                }
+            }
+            &:nth-child(3){
+                scale: (1.2);
+                transition: all 0.2s;
+                svg path{
+                    fill:#3b5998;
+                }
+            }
+          }
+        }
+    }
+    &__overlay{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100vh;
+        background-color: #fff;
+        opacity: 0.75;
+    }
+ 
+}

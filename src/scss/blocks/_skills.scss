@@ -1,0 +1,70 @@
+.skills{
+    padding-top: 120px;
+    // &__header{
+    //     position: relative;
+    //     margin: 0 auto;
+    //     text-align: center;
+    //     @include circle;
+    //     padding-left: 0;
+    //     &:before{
+    //         left: 50%;
+    //         transform: translateX(-50%);
+
+    //     }
+    // }
+    // &__subheader{
+    //     margin: 0 auto;
+    //     text-align: center;
+    // }
+    .line{
+        margin: 25px auto 0;
+
+    }
+    &__item{
+        display: grid;
+        padding-top: 60px;
+        grid-template-columns: 270px 270px 270px 270px;
+        grid-template-rows: 270px auto;
+        column-gap: 13px;
+        row-gap: 13px;
+        padding-left: 10px;
+        align-items: center;
+
+        &-title{
+            margin-top: 20px;
+            margin-bottom: 0;
+            &-jquery{
+                margin-top: 33px;
+            }
+            &-mongo{
+                margin-top: 32px;
+            }
+        }
+
+
+        &-work{
+            display: flex;
+            flex-direction: column;
+            width: 270px;
+            height: 270px;
+            border: 1px solid #000000;
+            box-sizing: border-box;
+            padding: 30px;
+        }
+        &-jquery{
+            margin-top: 15px;
+        }
+
+        &-text{
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+            width: 211px;
+        }
+        &-icon{
+            display: flex;
+            align-items: center;
+        }
+     
+    }
+}

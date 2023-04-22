@@ -1,0 +1,79 @@
+@font-face {
+	font-family: 'Norms';
+	src: url('../fonts/TTNorms-Light.ttf');
+	src: local('☺'), url('../fonts/TTNorms-Light.woff') format('ttf'), url('../fonts/TTNorms-Light.ttf') format('truetype'), url('../fonts/TTNorms-Light.woff2') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Norms';
+	src: url('../fonts/TTNorms-ExtraLight.eot');
+	src: local('☺'), url('../fonts/TTNorms-ExtraLight.ttf') format('ttf'), url('../fonts/TTNorms-ExtraLight.woff') format('truetype'), url('../fonts/TTNorms-ExtraLight.eot') format('svg');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Norms';
+	src: url('../fonts/TTNorms-Medium.eot');
+	src: local('☺'), url('../fonts/TTNorms-Medium.ttf') format('ttf'), url('../fonts/TTNorms-Medium.woff') format('truetype'), url('../fonts/TTNorms-Medium.woff2') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Norms';
+	src: url('../fonts/TTNorms-Bold.ttf');
+	src: local('☺'), url('../fonts/TTNorms-Bold.woff') format('woff'), url('../fonts/TTNorms-Bold.ttf') format('truetype'), url('../fonts/TTNorms-Bold.woff2') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+// @font-face {
+// 	font-family: 'Poppins';
+// 	src: url('../fonts/Poppins-Medium.eot');
+// 	src: local('☺'), url('../fonts/Poppins-Medium.woff') format('woff'), url('../fonts/Poppins-Medium.ttf') format('truetype'), url('../fonts/Poppins-Medium.svg') format('svg');
+// 	font-weight: 500;
+// 	font-style: normal;
+// }
+
+
+
+* {
+	font-family: 'Norms';
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	position: relative;
+}
+
+.container {
+	margin: 0 auto;
+	width: 1140px;
+	position: relative;
+}
+
+
+
+@import "./base/variables";
+@import "./base/mixin";
+@import "./blocks/btn";
+@import "./blocks/promo";
+@import "./blocks/title";
+@import "./blocks/link-social";
+@import "./blocks/hamburger";
+@import "./blocks/menu";
+@import "./blocks/about-me";
+@import "./blocks/resume";
+@import "./blocks/line";
+@import "./blocks/skills";
+@import "./blocks/progress";
+@import "./blocks/portfolio";
+@import "./blocks/price";
+@import "./blocks/contact";
+@import "./blocks/media"; //подключаем последними для корректной работы
+@import "./blocks/policity";

@@ -1,0 +1,109 @@
+.resume {
+    padding-top: 120px;
+
+    &__title {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        padding: 0;
+        font-weight: bold;
+        @include circle;
+
+        &:before {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__column {
+        &-title {
+            position: relative;
+            padding-left: 40px;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $main_color;
+                border-radius: 100%;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &__subheader {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .line {
+        margin: 25px auto;
+
+    }
+
+    &__wrapper {
+        padding: 60px 65px 0 65px;
+        display: grid;
+        grid-template-columns: 425px 425px;
+        column-gap: 136px;
+        overflow: hidden;
+    }
+
+    &__items {
+        padding-top: 45px;
+        padding-left: 105px;
+
+        &-location {
+            font-weight: 500;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 40px;
+            left: 7px;
+            top: 63px;
+            background-color: #000;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            height: calc(100% + 20px);
+            width: 1px;
+            top: -8px;
+            left: 7px;
+            background-color: #000;
+        }
+
+        &-body {
+            margin-top: 12px;
+            padding-left: 43px;
+            font-size: 12px;
+            line-height: 18px;
+            font-weight: 500;
+
+        }
+
+        &-icon {
+            position: absolute;
+            left: 65px;
+            top: 59px;
+            @include circle;
+
+            &:before {
+                left: -18px;
+                top: -13px;
+            }
+
+        }
+    }
+}

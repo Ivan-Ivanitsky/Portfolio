@@ -1,0 +1,56 @@
+.promo{
+    min-height: 100vh;
+    position: relative;
+    background: url('../img/Organick.jpg') no-repeat 50%/cover;
+    padding-top: 335px;
+    &__btns{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 135px 135px;
+    align-items: center;
+    }
+    
+    &__subtitle{
+        position: relative;
+        @include circle-big;
+        z-index: 2;
+    }
+
+    &__link{
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 21px;
+        color: #000000;
+        padding: 12px 25px;;
+        &-invisible{
+            height: 45px;
+            padding: 12px 27px 11px 34px;
+        }
+        &:hover{
+            color: #000000;
+            text-decoration: none;
+        }
+    }
+    &__description{
+        font-size: calc(2rem + 5 *((100vw - 320px))/880);
+        font-weight:300;
+    }
+}
+
+
+@keyframes show {
+    0%{width: 0;visibility: hidden;}
+    100%{width: 35%;visibility: visible;}
+}
+
+.block__img{
+    position: absolute;
+    right: 4%;
+    bottom: -45%;
+    width: 35%;
+    animation: show 1s;
+    img{
+        width: 100%;
+        border-radius: 100%;
+    }
+}

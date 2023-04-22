@@ -1,0 +1,51 @@
+@mixin circle {
+    &:before {
+        content: " ";
+        position: absolute;
+        top: -25%;
+        left: 0;
+        width: 36px;
+        height: 36px;
+        background: #9ee2ef;
+        z-index: -1;
+        border-radius: 100%;
+    }
+}
+
+@mixin circle-big {
+    &::before {
+        content: " ";
+        position: absolute;
+        top: -15px;
+        left: -20px;
+        width: 85px;
+        height: 85px;
+        background: #9ee2ef;
+        z-index: -1;
+        border-radius: 100%;
+    }
+}
+
+@mixin animate {
+    &:hover {
+        transition: all 0.3s;
+        transform: scale(1.05);
+        z-index: 10000;
+
+        .show {
+            visibility: visible;
+            opacity: 1;
+            transition: all 0.3s;
+            // pointer-events:none
+        }
+
+        .portfolio__rgba {
+            opacity: 1;
+        }
+
+        .portfolio__title {
+            opacity: 1;
+            transition: all 0.3s;
+        }
+    }
+}
