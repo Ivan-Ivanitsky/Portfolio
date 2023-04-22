@@ -1,4 +1,3 @@
-//Hamburger
 import {
   gsap,
   TextPlugin,
